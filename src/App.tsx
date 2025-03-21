@@ -3,12 +3,12 @@ import reactLogo from './assets/react.svg'
 import { ComboboxDemo } from './components/example-combobox'
 import { DialogDemo } from './components/example-dialog'
 import viteLogo from '/vite.svg'
-import { fetchTodos, Todo } from './api/api';
+import { fetchTodosFirstTen, Todo } from './api/api';
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const handleFetchTodos = async () => {
-    const todos = await fetchTodos();
+    const todos = await fetchTodosFirstTen();
     setTodos(todos);
   };
 

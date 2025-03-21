@@ -5,7 +5,7 @@ export interface Todo {
     completed: boolean;
 }
 
-export const fetchTodos = async (): Promise<Todo[]> => {
+export const fetchTodosFirstTen = async (): Promise<Todo[]> => {
     const response = await fetch("https://jsonplaceholder.typicode.com/todos");
 
     if (!response.ok) {
